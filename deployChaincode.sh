@@ -269,10 +269,10 @@ chaincodeQuery() {
     setGlobalsForPeer0Org2
 
     # Query all cars
-    # peer chaincode query -C $CHANNEL_NAME -n ${CC_NAME} -c '{"Args":["queryAllCars"]}'
+     peer chaincode query -C $CHANNEL_NAME -n ${CC_NAME} -c '{"Args":["queryAllCars"]}'
 
     # Query Car by Id
-    peer chaincode query -C $CHANNEL_NAME -n ${CC_NAME} -c '{"function": "queryCar","Args":["CAR0"]}'
+    #peer chaincode query -C $CHANNEL_NAME -n ${CC_NAME} -c '{"function": "queryCar","Args":["CAR0"]}'
     #'{"Args":["GetSampleData","Key1"]}'
 
     # Query Private Car by Id
@@ -283,19 +283,19 @@ chaincodeQuery() {
 # chaincodeQuery
 
 # Run this function if you add any new dependency in chaincode
-# presetup
+#presetup
 
-packageChaincode
-installChaincode
-queryInstalled
-approveForMyOrg1
-checkCommitReadyness
-approveForMyOrg2
-checkCommitReadyness
-commitChaincodeDefination
-queryCommitted
-chaincodeInvokeInit
-sleep 5
-chaincodeInvoke
-sleep 3
-chaincodeQuery
+# packageChaincode
+#installChaincode
+ #queryInstalled
+#approveForMyOrg1
+ #checkCommitReadyness
+ #approveForMyOrg2
+#checkCommitReadyness
+ #commitChaincodeDefination
+ #queryCommitted
+#chaincodeInvokeInit
+# sleep 5
+#chaincodeInvoke
+# sleep 3
+ chaincodeQuery
