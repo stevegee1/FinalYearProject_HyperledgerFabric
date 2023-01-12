@@ -85,8 +85,10 @@ updateAnchorPeers(){
     peer channel update -o localhost:7050 --ordererTLSHostnameOverride orderer.example.com -c $CHANNEL_NAME -f ./artifacts/channel/${CORE_PEER_LOCALMSPID}anchors.tx --tls $CORE_PEER_TLS_ENABLED --cafile $ORDERER_CA
     
 }
-
-# removeOldCrypto
-# createChannel
- #joinChannel
+ removeOldCrypto
+ sleep 5
+createChannel
+ sleep 5
+ joinChannel
+  sleep 5
 updateAnchorPeers
