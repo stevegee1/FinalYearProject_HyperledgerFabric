@@ -7,8 +7,7 @@ createcertificatesForOrg1() {
 
    
   # fabric-ca-client enroll -u https://admin:adminpw@localhost:7054 --caname ca.org1.example.com --tls.certfiles ${PWD}/fabric-ca/org1/tls-cert.pem
-   
-
+fabric-ca-client enroll -u https://minter:minterpw@localhost:7054 --caname ca.org1.example.com --tls.certfiles ${PWD}/fabric-ca/org1/tls-cert.pem
   # echo 'NodeOUs:
   # Enable: true
   # ClientOUIdentifier:
@@ -33,6 +32,7 @@ createcertificatesForOrg1() {
   # echo "Register peer1"
   # echo
   # fabric-ca-client register --caname ca.org1.example.com --id.name peer1 --id.secret peer1pw --id.type peer --tls.certfiles ${PWD}/fabric-ca/org1/tls-cert.pem
+     fabric-ca-client register --caname ca-org1 --id.name minter --id.secret minterpw --id.type client --tls.certfiles ${PWD}/fabric-ca/org1/tls-cert.pem
 
   # echo
   # echo "Register user"
